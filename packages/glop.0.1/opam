@@ -4,7 +4,7 @@ build: [
   ["%{make}%"]
   ["%{make}%" "install"]
 ]
-depends: ["ocamlfind" "bricabrac" "bigarray" "algen"]
+depends: ["ocamlfind" "bricabrac" "algen"]
 remove: [
   ["ocamlfind" "remove" "glop"]
 ]
