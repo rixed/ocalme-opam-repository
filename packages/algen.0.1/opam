@@ -4,6 +4,7 @@ build: [
   ["%{make}%"]
   ["%{make}%" "install"]
 ]
+depends: ["ocamlfind"]
 remove: [
   ["ocamlfind" "remove" "algen"]
 ]
