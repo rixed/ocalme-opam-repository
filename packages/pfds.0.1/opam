@@ -4,7 +4,7 @@ build: [
   ["%{make}%"]
   ["%{make}%" "install"]
 ]
-depends: ["ocamlfind" "batteries"]
+depends: ["ocamlfind"]
 remove: [
   ["ocamlfind" "remove" "pfds"]
 ]
