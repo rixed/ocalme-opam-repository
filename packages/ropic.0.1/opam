@@ -3,8 +3,8 @@ maintainer: "rixed-opam@happyleptic.org"
 build: [
   ["./configure" "-prefix" "%{prefix}%"]
   ["%{make}%"]
-  ["%{make}%" "install"]
 ]
+install: ["%{make}%" "install"]
 depends: ["ocamlfind" "batteries" "cmdliner"]
 remove: [
   ["ocamlfind" "remove" "ropic"]

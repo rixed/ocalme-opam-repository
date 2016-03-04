@@ -1,0 +1,13 @@
+opam-version: "1.3"
+name: "owww"
+version: "~unknown"
+maintainer: "Cedric Cellier <rixed@happyleptic.org>"
+authors: "Cedric Cellier <rixed@happyleptic.org>"
+build: [
+  [make]
+]
+install: [make "install"]
+remove: ["ocamlfind" "remove" "owww"]
+depends: [
+  "ocamlfind" "batteries" "cgi" {build}
+]
