@@ -5,7 +5,7 @@ build: [
   ["%{make}%"]
 ]
 install: ["%{make}%" "install"]
-depends: ["ocamlfind" "batteries" "cmdliner"]
+depends: ["ocamlfind" "batteries" "cmdliner" "ounit"]
 remove: [
   ["ocamlfind" "remove" "ropic"]
 ]
