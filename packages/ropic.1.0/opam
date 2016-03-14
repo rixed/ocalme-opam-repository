@@ -1,0 +1,11 @@
+opam-version: "1"
+maintainer: "rixed-opam@happyleptic.org"
+build: [
+  ["./configure" "-prefix" "%{prefix}%"]
+  ["%{make}%"]
+]
+install: ["%{make}%" "install"]
+depends: ["ocamlfind" "batteries" "cmdliner" "ounit"]
+remove: [
+  ["ocamlfind" "remove" "ropic"]
+]
