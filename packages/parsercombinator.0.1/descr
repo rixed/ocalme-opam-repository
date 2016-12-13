@@ -1,0 +1,5 @@
+Dead simple combinatoric parser
+
+Has some rudimentary and slow error detection mechanism.
+Secret plans: be able to parse some perl as best as possible without executing
+it.
