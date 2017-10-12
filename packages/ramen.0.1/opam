@@ -2,14 +2,16 @@ opam-version: "1.2"
 name: "ramen"
 version: "0.1"
 maintainer: "rixed-opam@happyleptic.org"
+authors: "rixed-opam@happyleptic.org"
 homepage: "https://github.com/PerformanceVision/ramen"
 bug-reports: "https://github.com/PerformanceVision/ramen/issues"
 dev-repo: "https://github.com/PerformanceVision/ramen.git"
 build: [make]
+build-test: [make "check"]
 install: [make "install"]
 remove: [make "uninstall"]
 depends: [
-  "lwt.ppx"
+  "lwt"
   "batteries"
   "stdint" {>= "0.4.3"}
   "parsercombinator"
@@ -25,4 +27,5 @@ depends: [
   "js_of_ocaml-ppx" {build}
   "cmdliner" {build}
   "cryptohash" {build}
+  "qcheck" {test}
 ]
