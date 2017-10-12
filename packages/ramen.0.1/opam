@@ -20,7 +20,6 @@ depends: [
   "binocle"
   "owl" {>= "0.2.9"}
   "sqlite3" {build}
-  "unix" {build}
   "num" {build}
   "ppp" {build}
   "js_of_ocaml" {build}
