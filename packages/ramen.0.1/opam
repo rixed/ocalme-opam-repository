@@ -8,8 +8,8 @@ bug-reports: "https://github.com/PerformanceVision/ramen/issues"
 dev-repo: "https://github.com/PerformanceVision/ramen.git"
 build: [make]
 build-test: [make "check"]
-install: [make "install"]
-remove: [make "uninstall"]
+install: [make "bin_dir=%{prefix}%/bin" "install"]
+remove: [make "bin_dir=%{prefix}%/bin" "uninstall"]
 depends: [
   "lwt"
   "batteries"
