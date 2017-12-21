@@ -2,9 +2,9 @@ opam-version: "1.2"
 name: "ramen"
 maintainer: "rixed-opam@happyleptic.org"
 authors: "rixed-opam@happyleptic.org"
-homepage: "https://github.com/PerformanceVision/ramen"
-bug-reports: "https://github.com/PerformanceVision/ramen/issues"
-dev-repo: "https://github.com/PerformanceVision/ramen.git"
+homepage: "https://github.com/rixed/ramen"
+bug-reports: "https://github.com/rixed/ramen/issues"
+dev-repo: "https://github.com/rixed/ramen.git"
 build: [make]
 build-test: [make "check"]
 install: [make "bin_dir=%{prefix}%/bin" "install"]
@@ -27,6 +27,7 @@ depends: [
   "cmdliner" {= "1.0.2"}
   "cryptohash" {= "0.1.2"}
   "syslog" {= "1.4"}
+  "net_codecs" {>= "1.2"}
   "qcheck" {test}
 ]
 depexts: [
