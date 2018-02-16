@@ -1,0 +1,8 @@
+opam-version: "1"
+version: "1.5"
+maintainer: "rixed-opam@happyleptic.org"
+homepage: "https://github.com/rixed/ocaml-syslog"
+build: [make "reallyall"]
+remove: [["ocamlfind" "remove" "syslog"]]
+depends: ["ocamlfind"]
+install: [make "install"]
