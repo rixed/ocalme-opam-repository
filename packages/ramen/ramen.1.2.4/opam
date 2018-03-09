@@ -1,0 +1,37 @@
+opam-version: "1.2"
+version: "1.2.4"
+name: "ramen"
+maintainer: "rixed-opam@happyleptic.org"
+authors: "rixed-opam@happyleptic.org"
+homepage: "https://github.com/rixed/ramen"
+bug-reports: "https://github.com/rixed/ramen/issues"
+dev-repo: "https://github.com/rixed/ramen.git"
+build: [make]
+build-test: [make "check"]
+install: [make "bin_dir=%{bin}%" "install"]
+remove: [make "bin_dir=%{bin}%" "uninstall"]
+depends: [
+  "ocamlfind" {= "1.7.3-1"}
+  "lwt" {= "3.3.0"}
+  "lwt_ppx" {= "1.1.0"}
+  "batteries" {= "2.8.0"}
+  "stdint" {= "0.5.0fix1"}
+  "parsercombinator" {>= "0.2"}
+  "cohttp-lwt-unix" {build & = "1.0.2"}
+  "binocle" {>= "0.3"}
+  "lacaml" {= "10.0.2"}
+  "sqlite3" {= "4.3.2"}
+  "num"
+  "ppp" {build & >= "2.1"}
+  "js_of_ocaml" {build & = "3.0.2"}
+  "js_of_ocaml-ppx" {build}
+  "cmdliner" {build & = "1.0.2"}
+  "syslog" {= "1.5"}
+  "net_codecs" {>= "0.3"}
+  "qtest" {test}
+  "ocaml-compiler-libs" {build & = "v0.10.0"}
+  "inotify" {= "2.3"}
+]
+depexts: [
+  [["debian"] ["libc-dev openssl m4"]]
+]
