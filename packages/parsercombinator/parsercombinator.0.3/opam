@@ -1,0 +1,30 @@
+opam-version: "1.2"
+name: "parsercombinator"
+version: "0.3"
+maintainer: "rixed@free.fr"
+authors: "rixed@free.fr"
+dev-repo: "https://github.com/rixed/ocaml-parsercombinator.git"
+doc: "http://rixed.github.io/ocaml-parsercombinator/"
+homepage: "https://github.com/rixed/ocaml-parsercombinator/"
+build: [
+  ["./configure" "--prefix=%{prefix}%"]
+  [make]
+]
+build-doc: [ [make "doc"] ]
+build-test: [ [make "check"] ]
+install: [make "install"]
+remove: ["ocamlfind" "remove" "parsercombinator"]
+depends: [
+  "ocamlfind" {build}
+  "batteries"
+  "ounit" {test}
+  "portia" {build & >= "1.0"}
+  "lwt"
+]
+depexts: [
+  [["debian"] ["asciidoc"]]
+  [["ubuntu"] ["asciidoc"]]
+]
+post-messages: [
+  "This package requires asciidoc to build the doc." {failure}
+]
