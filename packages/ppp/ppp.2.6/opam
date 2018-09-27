@@ -1,0 +1,16 @@
+opam-version: "1.2"
+name: "ppp"
+version: "2.6"
+maintainer: "Cedric Cellier <rixed@happyleptic.org>"
+authors: "Cedric Cellier <rixed@happyleptic.org>"
+build: [ [make] ]
+build-test: [ [make "check"] ]
+install: [make "bin_dir=%{bin}%" "install"]
+remove: [make "bin_dir=%{bin}%" "uninstall"]
+depends: [
+  "stdint"
+  "ppx_tools" {build}
+  "ocamlfind" {build}
+  "qcheck" {test}
+]
+available: [ ocaml-version >= "4.05.0" ]
