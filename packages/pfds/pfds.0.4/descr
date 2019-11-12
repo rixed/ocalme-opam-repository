@@ -1,0 +1,3 @@
+Purely Functional Data Structures, mostly from Okasaki.
+
+Also add a stream type inspired from python's itertools, a prefix tree...
