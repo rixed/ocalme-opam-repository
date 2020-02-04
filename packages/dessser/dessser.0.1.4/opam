@@ -1,0 +1,22 @@
+opam-version: "2.0"
+version: "0.1.4"
+name: "dessser"
+maintainer: "rixed-opam@happyleptic.org"
+authors: "rixed-opam@happyleptic.org"
+homepage: "https://github.com/rixed/dessser"
+bug-reports: "https://github.com/rixed/dessser/issues"
+dev-repo: "git+https://github.com/rixed/dessser.git"
+synopsis: "(de)serializer generator"
+build: [
+  ["./configure"]
+  [make]
+  [make "check"] {with-test}
+]
+install: [make "bindir=%{bin}%" "install"]
+remove: [make "bindir=%{bin}%" "uninstall"]
+depends: [
+  "ocamlfind"
+  "batteries"
+  "stdint" {= "0.6.0fix2"}
+  "parsercombinator"
+]
