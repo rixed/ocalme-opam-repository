@@ -3,7 +3,7 @@ maintainer: "rixed-opam@happyleptic.org"
 build: [
   ["./configure"]
   [make]
-  [make "install"]
 ]
+install: [make "install"]
 remove: [["ocamlfind" "remove" "cgi"]]
 depends: ["ocamlfind"]
