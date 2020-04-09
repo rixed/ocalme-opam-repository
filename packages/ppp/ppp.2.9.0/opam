@@ -1,0 +1,22 @@
+opam-version: "2.0"
+name: "ppp"
+version: "2.9.0"
+synopsis: "Generation of parsers and pretty printers from OCaml types"
+bug-reports: "https://github.com/rixed/ocaml-pretty-printers-parsers/issues"
+homepage: "https://github.com/rixed/ocaml-pretty-printers-parsers"
+maintainer: "Cedric Cellier <rixed@happyleptic.org>"
+authors: "Cedric Cellier <rixed@happyleptic.org>"
+dev-repo: "git+https://github.com/rixed/ocaml-pretty-printers-parsers.git"
+build: [
+  [ make ]
+  [ make "check" ] {with-test}
+]
+install: [make "bin_dir=%{bin}%" "install"]
+remove: [make "bin_dir=%{bin}%" "uninstall"]
+depends: [
+  "stdint"
+  "ppx_tools" {build}
+  "ocamlfind" {build}
+  "qcheck" {with-test}
+  "ocaml" {>= "4.08.1"}
+]
