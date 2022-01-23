@@ -1,0 +1,22 @@
+opam-version: "2.0"
+version: "0.2.0"
+name: "bin-annot"
+maintainer: "rixed-opam@happyleptic.org"
+authors: "rixed-opam@happyleptic.org"
+homepage: "https://github.com/rixed/ocaml-bin-annot"
+bug-reports: "https://github.com/rixed/ocaml-bin-annot/issues"
+dev-repo: "git+https://github.com/rixed/ocaml-bin-annot.git"
+synopsis: "Tells the OCaml type under the cursor"
+build: [
+  [make]
+]
+install: [make "bin_dir=%{bin}%" "install"]
+remove: [make "bin_dir=%{bin}%" "uninstall"]
+depends: [
+  "ocaml-compiler-libs"
+  "ocamlfind"
+]
+url {
+  src: "https://github.com/rixed/ocaml-bin-annot/archive/refs/tags/v0.2.0.tar.gz"
+  checksum: "md5=2deda3162ab17990d03225f5d3b94e32"
+}
