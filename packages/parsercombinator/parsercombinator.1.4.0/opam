@@ -1,0 +1,33 @@
+opam-version: "2.0"
+name: "parsercombinator"
+version: "1.4.0"
+synopsis: "Resumable combinatoric parser with error detection"
+maintainer: "rixed@free.fr"
+authors: "rixed@free.fr"
+bug-reports: "https://github.com/rixed/ocaml-parsercombinator/issues"
+dev-repo: "git+https://github.com/rixed/ocaml-parsercombinator.git"
+doc: "http://rixed.github.io/ocaml-parsercombinator/"
+homepage: "https://github.com/rixed/ocaml-parsercombinator/"
+build: [
+  ["./configure" "--prefix=%{prefix}%"]
+  [make]
+  [make "doc"] {with-doc}
+  [make "check"] {with-test}
+]
+install: [make "install"]
+remove: ["ocamlfind" "remove" "parsercombinator"]
+depends: [
+  "ocamlfind" {build}
+  "batteries" {>= "3.0.0"}
+  "ounit" {with-test}
+  "portia" {build & >= "1.0"}
+  "lwt"
+  "lwt_ppx"
+]
+depexts: [
+  [["debian"] ["asciidoc"]]
+  [["ubuntu"] ["asciidoc"]]
+]
+post-messages: [
+  "This package requires asciidoc to build the doc." {failure}
+]
