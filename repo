@@ -1,2 +1,2 @@
-opam-version: 2.0
-upstream: https://github.com/rixed/ocalme-opam-repository
+opam-version: "2"
+upstream: "https://github.com/rixed/ocalme-opam-repository"
