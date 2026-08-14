@@ -40,5 +40,5 @@ build: [
 dev-repo: "git+https://github.com/rixed/ocurl.git"
 url {
   src: "https://github.com/rixed/ocurl/archive/refs/tags/0.10.1.tar.gz"
-  checksum: "md5=626da7c22c1a832c6fb9b97fff76d3f1"
+  checksum: "md5=51a656bd80de8e8dac8888e5a9b2bad7"
 }
